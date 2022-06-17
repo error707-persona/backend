@@ -12,7 +12,7 @@ const isAuth = (req, res, next) => {
   const auth = req.headers.authorization; // Get authorizationn data from header
 
   if (auth) {
-    const token = auth.slice(7, arr.length); // Extract jwt tokem from auth header data
+    const token = auth.slice(7, auth.length); // Extract jwt tokem from auth header data
 
     jwt.verify(
       token,
